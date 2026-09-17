@@ -1,8 +1,19 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
 }
 
 a {
@@ -10,12 +21,22 @@ a {
   color: inherit;
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .logo {
   width: 60px;
   height: 60px;
   object-fit: contain;
   border-radius: 40%;
 }
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
   width: 100%;
@@ -27,7 +48,7 @@ a {
 
 .navbar ul {
   padding: 10px 30px;
-  border-radius: 30%;
+  border-radius: 30px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -35,37 +56,65 @@ a {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
-
 }
 
+.navbar ul li a {
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: red;
+}
 
 a.active {
   color: red;
 }
 
+
+/* =========================
+   NAVBAR BUTTON
+========================= */
+
 .navbar button {
   background: #000;
   color: #fff;
   padding: 12px 25px;
-  border: 0;
-  outline: 0;
+  border: none;
+  outline: none;
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
 }
+
+.navbar button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   HOME CONTAINER
+========================= */
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
+  padding: 40px 8%;
 }
 
 .container h1 {
   font-size: 70px;
   font-weight: 500;
 }
+
+
+/* =========================
+   CONTACT BUTTONS
+========================= */
 
 .contact-button {
   display: flex;
@@ -76,20 +125,187 @@ a.active {
   gap: 20px;
 }
 
+
+/* =========================
+   JOBS
+========================= */
+
 .jobs {
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 30px 8%;
 }
 
 .jobs a {
   flex: 1 1 250px;
-  text-decoration: none;
   padding: 20px;
   background: #efefef;
   color: #000;
   border-radius: 8px;
   box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.jobs a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   JOB DETAILS
+========================= */
+
+.job-details {
+  width: 90%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Job information */
+
+.job-details p {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #333;
+  font-size: 16px;
+}
+
+
+/* Labels */
+
+.job-details b {
+  display: block;
+  margin-bottom: 6px;
+  color: #111;
+  font-size: 16px;
+}
+
+
+/* Job title */
+
+.job-details p:first-child b {
+  font-size: 24px;
+}
+
+
+/* =========================
+   APPLY BUTTON
+========================= */
+
+.job-details button {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 15px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.job-details button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.job-details button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navbar ul {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    order: 3;
+  }
+
+  .navbar ul li {
+    margin: 0 5px;
+    padding: 5px;
+  }
+
+  .navbar button {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+
+  /* Home */
+
+  .container {
+    min-height: 70vh;
+    padding: 30px 5%;
+    text-align: center;
+  }
+
+  .container h1 {
+    font-size: 40px;
+  }
+
+
+  /* Jobs */
+
+  .jobs {
+    padding: 20px 5%;
+    gap: 15px;
+  }
+
+  .jobs a {
+    flex: 1 1 100%;
+  }
+
+
+  /* Job details */
+
+  .job-details {
+    width: 90%;
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  .job-details p {
+    font-size: 14px;
+  }
+
+  .job-details p:first-child b {
+    font-size: 20px;
+  }
+
+
+  /* Apply button */
+
+  .job-details button {
+    width: 100%;
+    padding: 14px;
+  }
 }
