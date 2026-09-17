@@ -1,0 +1,58 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "title": "Sr. React Developer",
+            "salary": 50000,
+            "location": "London UK"
+        },
+        {
+            "id": 2,
+            "title": "Frontend Developer",
+            "salary": 40000,
+            "location": "San Francisco US"
+        },
+        {
+            "id": 3,
+            "title": "Backend Developer",
+            "salary": 45000,
+            "location": "New York US"
+        },
+        {
+            "id": 4,
+            "title": "Full Stack Developer",
+            "salary": 55000,
+            "location": "Toronto Canada"
+        },
+        {
+            "id": 5,
+            "title": "JavaScript Developer",
+            "salary": 42000,
+            "location": "Berlin Germany"
+        },
+        {
+            "id": 6,
+            "title": "UI/UX Designer",
+            "salary": 38000,
+            "location": "Paris France"
+        },
+        {
+            "id": 7,
+            "title": "Software Engineer",
+            "salary": 60000,
+            "location": "Seattle US"
+        },
+        {
+            "id": 8,
+            "title": "Mobile App Developer",
+            "salary": 48000,
+            "location": "Nairobi Kenya"
+        },
+        {
+            "id": 9,
+            "title": "DevOps Engineer",
+            "salary": 58000,
+            "location": "Amsterdam Netherlands"
+        }
+    ]
+}
